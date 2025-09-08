@@ -1,8 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
 
@@ -21,10 +19,16 @@ public class Main {
         );
 
         enumerate(names, e);
+
+        enumerate(names, (arrayList) -> {
+            for(String name : arrayList){
+                System.out.println(name);
+            }
+        });
+
     }
 
     public static void enumerate(ArrayList<String> arrayList, Enumerator e){
         e.enumerate(arrayList);
     }
-
 }
